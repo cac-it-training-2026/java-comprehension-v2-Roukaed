@@ -21,8 +21,9 @@ class NumberList {
 	 * @param limit（Listの最終要素）
 	 */
 	public void addFromOneTo(Integer limit) {
-		//TODO ここから実装する
-
+		for (int i = 0; i < limit; i++) {
+			numbers.add(i + 1);
+		}
 	}
 
 	/**
@@ -32,7 +33,9 @@ class NumberList {
 	 */
 	public Integer calcSumOfList() {
 		Integer sum = 0;
-		//TODO ここから実装する
+		for (int i = 0; i < numbers.size(); i++) {
+			sum += numbers.get(i);
+		}
 
 		return sum;
 	}
@@ -42,7 +45,9 @@ class NumberList {
 	 * 
 	 */
 	public void doubleListEachValue() {
-		//TODO ここから実装する
+		for (int i = 0; i < numbers.size(); i++) {
+			numbers.set(i, numbers.get(i) * 2);
+		}
 	}
 
 	/**
@@ -50,8 +55,10 @@ class NumberList {
 	 * 要素数が奇数の場合、中央値は残す
 	 */
 	public void removeIndexOfFirstHalf() {
-		//TODO ここから実装する
-
+		int half = numbers.size() / 2;
+		for (int i = 0; i < half; i++) {
+			numbers.remove(0);
+		}
 	}
 
 	/**

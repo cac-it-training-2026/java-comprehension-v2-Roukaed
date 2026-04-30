@@ -1,40 +1,20 @@
-package q01_basic.question06;
+package q02_advanced.question02;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/**
- * 標準入力を制御するクラス
- */
-class ConsoleReader {
-
-	/**
-	 * 文字列の標準入力。
-	 * 
-	 * @return 入力文字列
-	 * @throws IOException
-	 */
+public class ConsoleReader {
 	public String inputString() throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("input password>>");
 		String str = br.readLine();
 		return str;
 	}
 
-	/**
-	 * 整数の標準入力。
-	 * 
-	 * @return 入力整数
-	 * @throws IOException
-	 * @throws NumberFormatException
-	 */
 	public int inputNumber() throws IOException, NumberFormatException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("input id>>");
 		int num = Integer.parseInt(br.readLine());
 		return num;
-
 	}
 
 }
